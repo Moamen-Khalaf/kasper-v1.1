@@ -208,7 +208,7 @@ li.active {
   text-align: center;
   color: var(--column-color);
   font-weight: 500;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
 }
 .head + hr::after {
   content: "";
@@ -662,6 +662,100 @@ li.active {
 .quote .container h5 {
   color: #ccc;
 }
+/*pricing*/
+.pricing {
+  background-color: #fff;
+  /* min-height: 100vh; */
+  padding-bottom: var(--main-padding);
+  padding-top: var(--main-padding);
+}
+.pricing .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 5vh;
+}
+.pricing .card {
+  margin: 20px 10px;
+}
+.pricing .plan {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .plan small {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.pricing .card .price {
+  font-size: 3rem;
+  position: relative;
+  margin: 3vh 0;
+}
+.pricing .card .price::before {
+  content: "$";
+  position: absolute;
+  font-size: 20px;
+  left: -15px;
+}
+.pricing .card .price::after {
+  content: "/MO";
+  position: absolute;
+  font-size: 10px;
+  bottom: 0;
+  left: 100%;
+  transform: translateY(-50%);
+}
+.pricing .features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: var(--main-padding); */
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .features .feature {
+  padding: var(--main-padding) 0;
+}
+.pricing .features .feature:not(:last-child) {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3vh 0;
+}
+.pricing .subscribe button {
+  outline: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-color: var(--main-color);
+  background-color: transparent;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-property: scale;
+}
+.pricing .subscribe button:hover {
+  scale: 1.09;
+  color: #fff;
+  background-color: var(--main-color);
+}
+.pricing .contact {
+  text-align: center;
+}
+.pricing .contact a {
+  display: inline-block;
+  background-color: #0fcbf6;
+  color: #fff;
+  padding: 15px 30px;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
 @media (max-width: 450px) {
   .services .cards {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -718,6 +812,10 @@ li.active {
   }
   .skills-and-comments .container > div {
     flex-basis: 50%;
+  }
+  .pricing .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 @media (min-width: 1200px) {

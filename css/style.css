@@ -665,7 +665,6 @@ li.active {
 /*pricing*/
 .pricing {
   background-color: #fff;
-  /* min-height: 100vh; */
   padding-bottom: var(--main-padding);
   padding-top: var(--main-padding);
 }
@@ -724,13 +723,13 @@ li.active {
 .pricing .features .feature:not(:last-child) {
   border-bottom: 1px solid var(--main-color);
 }
-.pricing .subscribe {
+.pricing .buy {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 3vh 0;
 }
-.pricing .subscribe button {
+.pricing .buy button {
   outline: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -740,7 +739,7 @@ li.active {
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-property: scale;
 }
-.pricing .subscribe button:hover {
+.pricing .buy button:hover {
   scale: 1.09;
   color: #fff;
   background-color: var(--main-color);
@@ -756,6 +755,75 @@ li.active {
   margin-top: 5vh;
   margin-bottom: 10vh;
 }
+/*subscribe*/
+.subscribe {
+  position: relative;
+  padding-bottom: var(--main-padding);
+  padding-top: var(--main-padding);
+}
+.subscribe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/subscribe.jpg);
+  mix-blend-mode: overlay;
+  background-position: right;
+}
+.subscribe .container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  min-height: 40vh;
+}
+.subscribe .container p {
+  flex-basis: 100%;
+}
+.subscribe form {
+  flex-basis: 100%;
+  display: flex;
+}
+.subscribe .in {
+  position: relative;
+  border: 2px solid #fff;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe .in input[type="email"] {
+  padding: 10px 0;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+}
+.subscribe .in input[type="email"]::placeholder {
+  color: #ccc;
+}
+.subscribe .in label {
+  width: 10%;
+  height: 100%;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe .in input[type="submit"] {
+  padding: 10px 10px;
+  background-color: var(--main-color);
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 450px) {
   .services .cards {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -816,6 +884,13 @@ li.active {
   .pricing .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .subscribe .container p {
+    flex-basis: 45%;
+  }
+  .subscribe form {
+    flex-basis: 45%;
+    display: flex;
   }
 }
 @media (min-width: 1200px) {

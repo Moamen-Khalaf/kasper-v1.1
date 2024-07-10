@@ -616,14 +616,14 @@ li.active {
   border: 10px solid #333;
   border-color: #333 transparent transparent transparent;
 }
-/*qoute*/
-.qoute {
+/*quote*/
+.quote {
   padding-bottom: var(--main-padding);
   padding-top: var(--main-padding);
   position: relative;
   color: #fff;
 }
-.qoute::before {
+.quote::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -633,7 +633,7 @@ li.active {
   background-image: url(../images/quote.jpg);
   mix-blend-mode: overlay;
 }
-.qoute .container {
+.quote .container {
   min-height: 30vh;
   display: flex;
   flex-direction: column;
@@ -643,7 +643,7 @@ li.active {
   height: 100%;
   text-align: center;
 }
-.qoute .container h5 {
+.quote .container h5 {
   color: #ccc;
 }
 @media (max-width: 450px) {

@@ -40,7 +40,7 @@ nav {
   position: relative;
   justify-content: space-between;
   align-items: center;
-  min-height: 6vh;
+  height: 6vh;
   flex-wrap: wrap;
 }
 nav .sections {
@@ -117,7 +117,7 @@ nav hr {
 /*slider section*/
 .slider {
   position: relative;
-  min-height: 94vh;
+  height: 94vh;
 }
 .slider::after {
   content: "";
@@ -615,6 +615,36 @@ li.active {
   height: 0;
   border: 10px solid #333;
   border-color: #333 transparent transparent transparent;
+}
+/*qoute*/
+.qoute {
+  padding-bottom: var(--main-padding);
+  padding-top: var(--main-padding);
+  position: relative;
+  color: #fff;
+}
+.qoute::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../images/quote.jpg);
+  mix-blend-mode: overlay;
+}
+.qoute .container {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+  text-align: center;
+}
+.qoute .container h5 {
+  color: #ccc;
 }
 @media (max-width: 450px) {
   .services .cards {

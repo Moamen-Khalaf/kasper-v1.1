@@ -6,13 +6,13 @@
   padding: 0;
 }
 body {
-  scroll-behavior: smooth;
   font-family: "Open Sans", sans-serif;
   background-color: var(--main-bg-color);
   position: relative;
   overflow-x: hidden;
 }
 :root {
+  scroll-behavior: smooth;
   --main-color: #0fcbf6;
   --main-bg-color: #1f2022;
   --secondary-bg-color: #fff;
@@ -936,6 +936,9 @@ footer .social .links {
   display: flex;
   justify-content: space-between;
   padding: 0 5%;
+}
+footer .social .links i {
+  cursor: pointer;
 }
 footer p {
   font-weight: bold;

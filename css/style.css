@@ -356,7 +356,7 @@ li.active {
   aspect-ratio: 1 / 1;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   z-index: 2;
   background-color: var(--overlay-color);
@@ -366,6 +366,7 @@ li.active {
   align-items: center;
   transition-duration: 0.4s;
   opacity: 0;
+  cursor: pointer;
 }
 .portfolio .cards .card:hover .image::after {
   opacity: 1;

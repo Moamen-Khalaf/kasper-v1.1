@@ -723,14 +723,11 @@ li.active {
 .pricing .features .feature:not(:last-child) {
   border-bottom: 1px solid var(--main-color);
 }
-.pricing .buy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 3vh 0;
-}
-.pricing .buy button {
+.pricing button {
   outline: none;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
   padding: 10px 20px;
   cursor: pointer;
   border-color: var(--main-color);
@@ -739,7 +736,7 @@ li.active {
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-property: scale;
 }
-.pricing .buy button:hover {
+.pricing button:hover {
   scale: 1.09;
   color: #fff;
   background-color: var(--main-color);
